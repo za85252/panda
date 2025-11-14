@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panda Ecommerce Clone</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- NAVBAR START -->
+      <nav class="navbar">
+        <a class="brand">
+          <img src="image/logo.png" class="panda-logo" alt="panda logo" />
+        </a>
+        <form class="navbar-form">
+          <input type="text" placeholder="Search..." />
+          <i class="fas fa-search search-icon"></i>
+        </form>
+
+        <button class="navbar-toggler" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="navbar-nav" id="nav-menu">
+          <li class="nav-item"><a class="nav-link">Home</a></li>
+          <li class="nav-item"><a class="nav-link">Product</a></li>
+          <li class="nav-item"><a class="nav-link">About Us</a></li>
+          <li class="nav-item"><a class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      <!-- NAVBAR END -->
+
+      <!-- SLIDER START -->
+      <section class="slider">
+        <div class="slides">
+          <div class="slide active">
+            <div class="slide-content">
+              <h2>Mi LED TV 4A PRO 32</h2>
+              <p>High quality LED TV for home entertainment.</p>
+              <span class="price">$2000</span>
+              <button>Buy Now <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="slide-img">
+              <img src="image/tv.png" alt="" />
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>X-BOX X 360</h2>
+              <p>Best gaming console for fun lovers.</p>
+              <span class="price">$400</span>
+              <button>Buy Now <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="slide-img">
+              <img src="image/xbox.png" alt="" />
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Cool Dude Headphone</h2>
+              <p>Perfect for music and fun world.</p>
+              <span class="price">$520</span>
+              <button>Buy Now <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="slide-img">
+              <img src="image/headphone.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <span class="prev"><i class="fas fa-chevron-left"></i></span>
+          <span class="next"><i class="fas fa-chevron-right"></i></span>
+        </div>
+      </section>
+      <!-- SLIDER END -->
+
+      <!-- CATEGORY SECTION -->
+      <section class="categories">
+        <h2>Categories</h2>
+        <div class="category-list">
+          <div class="category-box">
+            <p>shoe</p>
+            <img src="image/shoes.png" alt="" />
+          </div>
+          <div class="category-box">
+            <p>Bag</p>
+            <img src="image/bag-1.png" alt="" />
+          </div>
+          <div class="category-box">
+            <p>watch</p>
+            <img src="image/watch.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTS SECTION -->
+      <section class="products">
+        <h2>Shoes</h2>
+        <div class="product-list">
+          <div class="product-box">
+            <img src="image/shoe-1.png" alt="" />
+            <p class="product-name">Reebok Dart</p>
+            <p class="product-price">$999</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="product-box">
+            <img src="image/shoe-2.png" alt="" />
+            <p class="product-name">Reebok Pump</p>
+            <p class="product-price">$799</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="product-box">
+            <img src="image/shoe-3.png" alt="" />
+            <p class="product-name">Reebok All Terrain</p>
+            <p class="product-price">$699</p>
+            <button>Buy Now</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="products">
+        <h2>Backpack</h2>
+        <div class="product-list">
+          <div class="product-box">
+            <img src="image/bag-1.png" alt="" />
+            <p class="product-name">Ison Backpack</p>
+            <p class="product-price">$999</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="product-box">
+            <img src="image/bag-2.png" alt="" />
+            <p class="product-name">Biowang Backpack</p>
+            <p class="product-price">$799</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="product-box">
+            <img src="image/bag-3.png" alt="" />
+            <p class="product-name">Dwyizu WS56 Smart</p>
+            <p class="product-price">$699</p>
+            <button>Buy Now</button>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <h2>Watch</h2>
+        <div class="product-list">
+          <div class="product-box">
+            <img src="image/watch.png" alt="" />
+            <p class="product-name">Rolex watch</p>
+            <p class="product-price">$1012</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="product-box">
+            <img src="image/watch.png" alt="" />
+            <p class="product-name">Amzing watch</p>
+            <p class="product-price">$799</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="product-box">
+            <img src="image/watch.png" alt="" />
+            <p class="product-name">smart watch</p>
+            <p class="product-price">$699</p>
+            <button>Buy Now</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <section class="footer">
+        <h2>LET’S STAY IN</h2>
+        <p>Get updates on sales and offers</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter Your Email" />
+          <button>Send</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="index.js"></script>
+  </body>
+</html>
