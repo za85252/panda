@@ -1,9 +1,9 @@
 // NAVBAR TOGGLE
-const navToggle = document.getElementById("nav-toggle");
+const menuBtn = document.getElementById("menu-btn");
 const navMenu = document.getElementById("nav-menu");
 
-navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
+menuBtn.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
 });
 
 // SLIDER FUNCTIONALITY
