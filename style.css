@@ -36,45 +36,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffffff;
-  padding: 15px 10px;
-  border-radius: 12px;
-  margin-top: 15px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  padding: 18px 30px;
+  border-radius: 14px;
+  
+ 
   position: sticky;
   top: 10px;
   z-index: 100;
 }
 
 .panda-logo {
-  width: 120px;
+  height:28px;
   cursor: pointer;
 }
 
-.navbar-form {
-  position: relative;
-  width: 40%;
-}
 
-.navbar-form input {
-  width: 100%;
-  padding: 10px 35px 10px 15px;
-  border-radius: 30px;
-  border: 1px solid #ddd;
-  outline: none;
-  transition: 0.3s;
-}
-
-.navbar-form input:focus {
-  border-color: #4e73df;
-}
-
-.search-icon {
-  position: absolute;
-  right: 12px;
-  top: 11px;
-  color: #666;
-}
 
 .navbar-toggler {
   background: none;
@@ -83,55 +60,50 @@ body {
   font-size: 22px;
   cursor: pointer;
 }
-
-.navbar-nav {
-  list-style: none;
+.navbar-collapse {
   display: flex;
-  gap: 20px;
+  align-item: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  width: 100%;
+    }
+.navbar-form {
+  position: relative;
+  flex:1;
+  max-width: 420px;
+  margin: 0 40px;
 }
-
-.nav-item .nav-link {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.nav-item .nav-link:hover {
-  color: #4e73df;
-}
-
-/* nav links */
-.navbar-nav {
-  list-style: none;
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-.nav-link {
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 10px;
-  color: #111827;
-  font-weight: 600;
-  transition: background 0.18s, color 0.18s, transform 0.12s;
-}
-.nav-link:hover {
-  background: rgba(255, 95, 95, 0.08);
-  color: var(--accent);
-  transform: translateY(-2px);
-}
-
-/* toggler for mobile */
-.navbar-toggler {
-  display: none;
-  background: transparent;
+.navbar-search {
+  width: 100%;
+  padding: 10px 42px 10px 20px;
+  border-radius: 40px;
   border: none;
-  font-size: 20px;
-  padding: 6px 8px;
-  cursor: pointer;
+  background: #f2f2f2;
+  font-size: 15px;
 }
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  color:#aaa;
+}
+/* Nav items*/
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.navbar-nav li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+}
+
 
 /* ====== SLIDER ====== */
 .slider {
@@ -374,30 +346,55 @@ body {
     width: calc(50% - 10px);
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-toggler {
+    display: block;
+    order: 2;
+  }
+
+  .navbar-collapse {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    gap: 15px;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .navbar-collapse.active {
+    display: flex;
+  }
+
   .navbar-form {
     order: 3;
     width: 100%;
     margin-top: 10px;
   }
-  .navbar-toggler {
-    display: block;
-    order: 2;
-  }
+
   .navbar-nav {
-    display: none;
     width: 100%;
-    gap: 0;
     flex-direction: column;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: 14px;
+    overflow: hidden;
+    max-height: 0; /* প্রাথমিকভাবে লেখা “ডুকে” থাকবে */
+    transition: max-height 0.3s ease;
   }
-  .navbar-nav.show {
-    display: flex;
-    background: transparent;
+  .navbar-nav.active {
+    max-height: 500px;
   }
-  .nav-link {
-    padding: 10px 12px;
-    border-radius: 8px;
+
+  .navbar-nav li a {
+    font-size: 17px;
   }
   .slides {
     height: auto;
