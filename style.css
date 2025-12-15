@@ -99,6 +99,9 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+.navbar ul li a:hover {
+  color: #e14b4b;
+}
 
 
 /* ====== SLIDER ====== */
