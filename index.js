@@ -11,24 +11,34 @@ const slides = document.querySelectorAll(".slide");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 let currentSlide = 0;
-
+// Slide show automatically
 function showSlide(index) {
-  slides.forEach((slide) => slide.classList.remove("active"));
-  slides[index].classList.add("active");
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === index) slide.classList.add("active");
+  });
 }
 
-prev.addEventListener("click", () => {
-  currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+// Next Slide
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
   showSlide(currentSlide);
-});
+}
 
-next.addEventListener("click", () => {
-  currentSlide = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
+// Previous Slide
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   showSlide(currentSlide);
-});
+}
 
-// AUTO SLIDE
-setInterval(() => {
-  currentSlide = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
-  showSlide(currentSlide);
-}, 5000);
+// Event listeners
+next.addEventListener("click", nextSlide);
+prev.addEventListener("click", prevSlide);
+
+// Auto slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+// Initialize first slide
+showSlide(currentSlide);
+
+
